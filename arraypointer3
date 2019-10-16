@@ -1,0 +1,11 @@
+nclude<stdio.h>
+void main()
+{
+	int a[]={10,20,30},*ptr;
+	ptr=a;											  //eg:- ptr=a+(100+(0*2)) =a[0]
+	++ptr;											 //eg:- ptr=a+(100+(1*2)) =a[1]
+	++ptr;											//eg:- ptr=a+(100+(2*2)) =a[2]
+	++*ptr;
+	printf("\n %d  ",++*ptr);
+	getch();
+}

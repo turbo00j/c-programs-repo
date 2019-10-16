@@ -1,0 +1,12 @@
+nclude<stdio.h>
+void main()
+{
+	int x=0,j,k;
+	for(k=0;k<5,j>0;k=k+2,j++)
+	{
+		x++;
+		printf("\n the values of k,j,x is %d %d %d",k,j,x);
+	}
+	getch();
+}
+

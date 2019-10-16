@@ -1,0 +1,10 @@
+nclude<stdio.h>
+void main()
+{
+	int a,b;
+	printf("enter b value\n");
+	scanf("%d",&b);
+	a=b++ + ++b + ++b;
+	printf("a=%d b=%d\n",a,b);
+	getch();
+}

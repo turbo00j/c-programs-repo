@@ -1,0 +1,15 @@
+nclude<stdio.h>
+#include<math.h>
+void main()
+{
+	int n,f=1,m;
+	printf("\n ENTER ANY NUMBER");
+	scanf("%d",&n);
+	m=n;
+	while(n>=1)
+	{
+		f=f*n;
+		n--;
+	}
+	printf("\n %d is a factorial of %d",f,m);
+}

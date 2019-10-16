@@ -1,0 +1,8 @@
+nclude<stdio.h>
+void main()
+{
+	int a;
+	a=5>4 || 4>9;
+	printf("\n value of a = %d ",a);
+	getch();
+}

@@ -1,0 +1,30 @@
+nclude<stdio.h>
+void main()
+{
+	int cost;
+	float comm;
+	char option[10];
+	char CPU[10];
+	char MONITOR[10];
+	CPU[10] = "CPU";
+	MONITOR[10] = "MONITOR";
+	printf("Choose one Available Hardware:\nCPU \nMONITOR \n");
+	/*printf("Enter the device\n"); 				 c=CPU m=MONITOR */
+	scanf("%s",&option);
+	printf("===========================\n");
+	printf("%s\n", option );
+
+	if (strcmp(option, CPU))
+	{
+		printf("CPU available");
+	}
+	else if (strcmp(option, MONITOR))
+	{
+		printf("MONITOR Device available\n");
+	}
+	else
+	{
+		printf("Device not available\n");
+	}
+	getch();
+}

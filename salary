@@ -1,0 +1,86 @@
+nclude<stdio.h>
+#include<math.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+	int basic_sal,med,edu;
+	float hra,da,pf,gross_sal,net_sal;
+	char emp_type; 							/* emp_type =type of the employee (govt or private) */
+	printf("Enter the employee type\n");	
+	scanf("%c",&emp_type);
+		printf("Enter the basic salary\n");
+		scanf("%d",&basic_sal);
+				
+		
+		if (emp_type == 'g')			
+			{	
+					if(basic_sal <= 300000)
+					{
+					printf("Enter the medical allowance\n");	
+					scanf("%d",&med);
+					hra=(float)10/100*basic_sal;
+					da=(float)7.5/100*basic_sal;
+					gross_sal=(float)basic_sal+hra+da+med;
+					pf=(float)10/100*gross_sal;
+					net_sal=(float)gross_sal-pf;
+					}
+				
+					else if (basic_sal > 300000 && basic_sal <= 1000000)
+					{
+					printf("Enter the medical allowance\n");	
+					scanf("%d",&med);
+					printf("Enter the educational allowance\n");	
+					scanf("%d",&edu);
+					hra=(float)15/100*basic_sal;
+					da=(float)10/100*basic_sal;
+					gross_sal=(float)basic_sal+hra+da+med+edu;
+					pf=(float)10/100*gross_sal;
+					net_sal=(float)gross_sal-pf;
+					}
+					else 
+					{
+					printf("SALARY is above 1000000\n");
+					}			
+			}
+		else if  (emp_type == 'p')		
+			{	
+					if(basic_sal <= 300000)
+					{
+					hra=(float)7/100 * basic_sal;
+					da= (float)5/100 * basic_sal;
+					gross_sal=(float)basic_sal+hra+da;
+					net_sal=(float)gross_sal;
+					}
+				
+					else if (basic_sal > 300000 && basic_sal <= 1000000)
+					{
+					printf("Enter the medical allowance\n");	
+					scanf("%d",&med);
+					hra=(float)8/100*basic_sal;
+					da=(float)7.5/100*basic_sal;
+					gross_sal=(float)basic_sal+hra+da+med;
+					pf=(float)5/100*gross_sal;
+					net_sal=(float)gross_sal-pf;
+					}
+					else if (basic_sal>1000000)
+					{
+					printf("SALARY is above 1000000\n");
+					}
+		}
+		else 
+		{
+			printf("Enter correct employee type\n");
+		}
+
+	printf("BASIC SALARY					=%d\n",basic_sal);
+	printf("HRA								=%.2f\n",hra);
+	printf("DA								=%.2f\n",da);
+	printf("MEDICAL ALLOWANCE				=%d\n",med);
+	printf("EDUCATIONAL ALLOWANCE			=%d\n",edu);
+	printf("GROSS SALARY					=%.2f\n",gross_sal);
+	printf("PF								=%.2f\n",pf);
+	printf("NET SALARY						=%.2f\n",net_sal);
+
+	getch();	
+}

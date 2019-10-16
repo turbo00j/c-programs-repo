@@ -1,0 +1,82 @@
+nclude<stdio.h>
+#include<string.h>
+#include<math.h>
+void main()
+{
+	int sno;
+	char name[20],cus_type;
+	float pre_units,cur_units,total_units,total_bill;
+	printf("\n Enter the serial no");
+	scanf("%d",&sno);
+	printf("\n Enter the name");
+	scanf("%s",&name); 
+	printf("\n Enter the previous units");
+	scanf("%f",&pre_units); 
+	printf("\n Enter the current units");
+	scanf("%f",&cur_units);
+	printf("\n Enter the consumer type");
+	scanf(" %c",&cus_type); 
+	total_units=cur_units-pre_units;
+	if(cus_type=='d')
+{
+	{
+		if(total_units<=100)
+		{
+			printf("\n TOTAL BILL AMOUNT : %2f",total_units*1.00);
+		}
+		else if(total_units>100 && total_units<=150)
+		{
+			printf("\n TOTAL BILL AMOUNT : %2f",total_units*1.25);
+		}
+		else if(total_units>150 && total_units<=300)
+		{
+			printf("\n TOTAL BILL AMOUNT : %2f",total_units*1.50);
+		}
+		else
+		{
+			printf("\n TOTAL BILL AMOUNT : %2f",total_units*1.75+50);
+		}
+	}
+}
+	else if(cus_type=='s')
+	{
+		if(total_units<=150)
+		{
+			printf("\n TOTAL BILL AMOUNT : %2f",total_units*1.25);
+		}
+		else if(total_units>150 && total_units<=300)
+		{
+			printf("\n TOTAL BILL AMOUNT : %2f",total_units*1.50);
+		}
+		else if(total_units>300 && total_units<=400)
+		{
+			printf("\n TOTAL BILL AMOUNT : %2f",total_units*1.75);
+		}
+		else
+		{
+			printf("\n TOTAL BILL AMOUNT : %2f",total_units*2.00+100);
+		}
+	}
+	else
+	{
+		if(total_units<=150)
+		{
+			printf("\n TOTAL BILL AMOUNT : %2f",total_units*1.50);
+		}
+		else if(total_units>150 && total_units<=350)
+		{
+			printf("\n TOTAL BILL AMOUNT : %2f",total_units*1.75);
+		}
+		else if(total_units>350 && total_units<=500)
+		{
+			printf("\n TOTAL BILL AMOUNT : %2f",total_units*2.00);
+		}
+		else
+		{
+			printf("\n TOTAL BILL AMOUNT : %2f",total_units*2.25+150);
+		}
+	}
+	printf("\n\t\t\t=======================================");
+	printf("\n\t\t\t *** ELECTRICITY BILL ZENCO Pvt ltd ***");
+	printf("\n\t\t\t=======================================");		
+}

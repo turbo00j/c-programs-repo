@@ -1,0 +1,64 @@
+nclude<stdio.h>
+#include<math.h>
+#include<string.h>
+void main()
+{
+	float comm;
+	int cost;
+	char option;
+	printf ("Select one option \n1.CPU\n2.MONITOR\n");
+	scanf("%c",&option);
+	printf ("Enter the cost of the device\n");
+	scanf("%d",&cost);
+	if (option == 'c')
+	{
+		if(cost < 10000)
+		{
+			comm=0;
+			printf("commssion=%.2f",comm);
+		}
+		else if(cost == 10000)
+		{
+			comm=500;
+			printf("commssion=%.2f",comm);
+		}
+		else if(cost > 10000 && cost <25000)
+		{
+			comm=(float)2/100*cost;
+			printf("commssion=%.2f",comm);
+		}
+		else if(cost == 25000)
+		{
+			comm=(float)3/100*cost;
+			printf("commssion=%.2f",comm);
+		}
+		else 
+		{
+			comm=(float)1/100*cost+1000;
+			printf("commssion=%.2f",comm);
+		}
+	}
+	else if (option == 'm')
+	{
+		if(cost < 10000)
+		{
+			comm=600;
+			printf("commssion=%.2f",comm);
+		}
+		else if(cost == 10000)
+		{
+			comm=(float)1/100*cost;
+			printf("commssion=%.2f",comm);
+		}
+		else if(cost > 10000 && cost <= 25000)
+		{
+			comm=(float)2.5/100*cost;
+			printf("commssion=%.2f",comm);
+		}
+	}
+	else
+	{
+		printf("DEVICE NOT AVAILABLE\n");
+	}
+getch();
+}

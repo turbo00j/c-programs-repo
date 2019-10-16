@@ -1,0 +1,27 @@
+nclude<stdio.h>
+#include<math.h>
+#include<conio.h>
+long double fact(long double);
+void main()
+{
+	long double n,f;
+	printf("\n ENTER N VALUE ");
+	scanf("%Lf",&n);
+	f=fact(n);
+	printf("\n factorial of n = %Lf ",f);
+	getch();
+}
+	long double fact(long double n)
+	{
+		long double f;
+		if(n==1)
+		{
+			return(1);
+		}
+		else
+		{
+			f=n*fact(n-1);
+			return(f);
+		}
+	}
+

@@ -1,0 +1,17 @@
+nclude<stdio.h>
+void main()
+{
+	int i,j,s,sp=15;
+	for(i=1;i<=5;i++)
+	{ 
+	for(s=1;s<=sp;s++)
+	printf(" ");
+	{
+	for (j=1;j<=i;j++)
+	printf("%d ",i);
+	printf("\n");
+	sp--;
+}
+}
+getch();
+}

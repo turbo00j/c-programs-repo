@@ -1,0 +1,10 @@
+nclude<stdio.h>
+void main()
+{
+	int a[5]={10,20,30,40,50},*p,i;
+	for(i=0;i<5;i++)
+	printf("a=[0] cell=%u,value=%d\n",&a[i],a[i]);
+	for(i=0;i<5;i++)
+	printf("a=[0] cell=%u,value=%d\n",p+i,*(p+i));
+	getch();	
+}

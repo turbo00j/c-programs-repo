@@ -1,0 +1,21 @@
+nclude<stdio.h>
+#include<math.h>
+void main()
+{
+	int n,i,sum=0,j;
+	printf("\n ENTER ANY NUMBER");
+	scanf("%d",&n);
+	j=n/2;
+	i=1;
+	while(i<=j)
+	{
+		if(n%i == 0)
+		sum=sum+i;
+		i++;
+	}
+	if(n==sum)
+	printf("\n %d is a perfect number",n);
+	else
+	printf("\n %d is a not perfect number",n);
+	
+}
