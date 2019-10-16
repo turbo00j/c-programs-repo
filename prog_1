@@ -1,0 +1,32 @@
+nclude<stdio.h>
+#include<string.h>
+void main()
+{
+char name[20],hno[20],village[20],city[20],state[20],country[20];
+int pin;
+		printf("Enter your name\n");
+		scanf("%s",&name);
+		printf("Enter your hno\n");
+		scanf("%s",&hno);
+		printf("Enter village name\n");
+		scanf("%s",&village);
+		printf("Enter city name\n");
+		scanf("%s",&city);
+		printf("Enter state name\n");
+		scanf("%s",&state);
+		printf("Enter country name\n");
+		scanf("%s",&country);
+		printf("Enter pin \n");
+		scanf("%d",&pin);
+			printf("**** ADRESS ***\n");
+			printf("...............\n");
+			printf("NAME    :%s\n",name);
+			printf("H.NO    :%s\n",village);
+			printf("CITY    :%s\n",city);
+			printf("STATE   :%s\n",state);
+			printf("COUNTRY :%s\n",country);
+			printf("PIN     :%d\n",pin);
+			printf("%..............\n");
+getch();
+}
+
